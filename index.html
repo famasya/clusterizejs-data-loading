@@ -1,0 +1,44 @@
+<html>
+<head>
+	<link rel="stylesheet" href="bower_components/clusterize/clusterize.css">
+	<script src="bower_components/clusterize/clusterize.min.js"></script>
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+</head>
+<body>
+	<div id="scrollArea" class="clusterize-scroll">
+		<div id="contentArea" class="clusterize-content">
+			<div class="clusterize-no-data">Loading data...</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$.ajax({
+			type:'GET',
+			url:'BX-Users.txt',
+			dataType:'text',
+			success:function(data){
+				processData(data);
+			}
+		})
+	});
+
+	function processData(data){
+		var allTextLines = data.split(/\r\n|\n/);
+		var headers = allTextLines[0].split(';');
+		var arrays = [];
+
+		for(var i=1; i<allTextLines.length; i++){
+			var datas = allTextLines[i].split(';');
+			if(datas.length == headers.length){
+				arrays.push("<div>"+datas[1]+"</div>");
+			}
+		}
+		var clusterize = new Clusterize({
+			rows: arrays,
+			scrollId: 'scrollArea',
+			contentId: 'contentArea'
+		});
+	}
+</script>
+</html>

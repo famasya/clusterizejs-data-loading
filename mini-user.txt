@@ -1,0 +1,11 @@
+"User-ID";"Location";"Age"
+"1";"nyc, new york, usa";NULL
+"2";"stockton, california, usa";"18"
+"3";"moscow, yukon territory, russia";NULL
+"4";"porto, v.n.gaia, portugal";"17"
+"5";"farnborough, hants, united kingdom";NULL
+"6";"santa monica, california, usa";"61"
+"7";"washington, dc, usa";NULL
+"8";"timmins, ontario, canada";NULL
+"9";"germantown, tennessee, usa";NULL
+"10";"albacete, wisconsin, spain";"26"

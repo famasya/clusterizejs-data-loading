@@ -1,0 +1,28 @@
+{
+  "name": "cluster-data-loading",
+  "version": "0.1.0",
+  "authors": [
+    "famasya <abid.famasya@gmail.com>"
+  ],
+  "description": "implementing clusterize.js to load heavy data records (>200k data)",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "data",
+    "clusterize"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/famasya",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "clusterize": "~0.5.0",
+    "jquery": "~2.1.4"
+  }
+}
